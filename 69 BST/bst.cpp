@@ -2,7 +2,7 @@
 #include <queue>
 using namespace std;
 
-//# notes : inorder of BST is sorted 
+//# notes : inorder of BST gives a sorted list of element
 
 
 class Node {
@@ -144,7 +144,7 @@ Node* deleteFromBst(Node* root , int val){
 
         //two child
         if(root->left != NULL && root->right != NULL){
-            // can use inorder predicessor(max of left) or post one (ie min of right) to replace then delter
+            // can use inorder predicessor(max of left) or post one ( min of right) to replace then delter
             int mini = minVal(root->right)->data;
             root->data = mini;
             root->right = deleteFromBst(root->right, mini);
