@@ -65,6 +65,16 @@ void levelOrderTraversal(Node* root){
     }
 
 }
+// preorder
+// NLR 
+void preOrder(Node* root){
+    if (root==NULL) return;
+
+    cout<<root->data<<" ";
+    preOrder(root->left);
+    preOrder(root->right);
+    
+}
 
 void insertElement(Node* &root){
     
@@ -86,4 +96,7 @@ int main(){
 
     cout<<"printing the bst"<<endl;
     levelOrderTraversal(root);
+
+    cout<<"preorder traversal: ";
+    preOrder(root);
 }
