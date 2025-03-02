@@ -113,6 +113,56 @@ Node* maxVal(Node* root){
     }
     return temp;
 }
+
+//- deletion from bst
+
+Node* deleteFromBst(Node* root , int val){
+    if(root== NULL ) return root;
+    
+    if(root->data == val){
+        // no child
+        if(root->left == NULL && root->right == NULL){
+            delete root;
+            return NULL;
+        }
+
+        //1 child
+        //left
+         if (root->left != NULL && root->right == NULL ){
+            Node* temp = root->left;
+            delete root;
+            return temp;
+            
+        }
+
+        //right
+        if ( root->left == NULL && root->right != NULL){
+            Node* temp= root->right;
+            delete root;
+            return temp;
+        }
+
+        //two child
+        if(root->left != NULL && root->right != NULL){
+            // can use inorder predicessor(max of left) or post one (ie min of right) to replace then delter
+            int mini = minVal(root->right)->data;
+            root->data = mini;
+            root->right = deleteFromBst(root->right, mini);
+            return root;
+        }
+    }
+    else if( root->data > val){
+        //left
+        root->left = deleteFromBst(root->left,val);
+        return root;
+    }
+    else {
+        //right
+        root->right = deleteFromBst(root->right,val);
+        return root;
+    }
+}
+
 int main(){
 
     Node* root = NULL;
@@ -131,4 +181,10 @@ int main(){
 
     cout<<"min value is:" <<minVal(root)->data << endl;
     cout<< "max vlaue is :" << maxVal(root)->data << endl;
+
+    root = deleteFromBst(root,30);
+
+    cout<<"printing the bst"<<endl;
+    levelOrderTraversal(root);
+
 }
