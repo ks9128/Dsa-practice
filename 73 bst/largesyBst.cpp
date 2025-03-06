@@ -109,7 +109,7 @@ struct Node {
 class Solution{
     public:
     /*You are required to complete this method */
-    // Return the size of the largest sub-tree which is also a BST
+    // Return the size of the largest sub-tree which is also a BST :
     
     class info{
         public:
