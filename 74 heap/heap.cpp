@@ -68,6 +68,7 @@ class heap{
 
 
 //# heapyfy algorithm part (inside of for loop in main fn) : this part tc= O(logn)
+//# 1 based indexing
 void heapify(int arr[] , int n , int i){  // put i-th element at correct position
     int largest = i;
     int left = 2*i;
@@ -85,7 +86,24 @@ void heapify(int arr[] , int n , int i){  // put i-th element at correct positio
         heapify(arr,n,largest); // now put largest at correct position
     }
 }
+// # for zero based idexing
+void heapifyzerobased(vector<int> &arr , int n , int i){  // put i-th element at correct position
+    int largest = i;
+    int left = 2*i+1;
+    int right = 2*i + 2; 
 
+    if( left < n && arr[largest]< arr[left]){
+        largest = left;
+    }
+    if( right< n && arr[largest]< arr[right]){
+        largest = right;
+    }
+
+    if(largest!=i){   // means i is updated
+        swap (arr[largest], arr[i]);
+        heapify(arr,n,largest); // now put largest at correct position
+    }
+}
 //- Heap Sort
 void heapSort(int arr[], int n){
     int size = n;
