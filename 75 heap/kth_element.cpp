@@ -1,7 +1,10 @@
 //{ Driver Code Starts
 // Initial function template for C++
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <sstream>
 using namespace std;
 
 
