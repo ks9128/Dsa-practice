@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
-using namespace std;  // Add missing namespace
+using namespace std;  
 
 pair < int , int > findSimilarity(vector < int > arr1, vector < int > arr2, int n, int m) 
 {
