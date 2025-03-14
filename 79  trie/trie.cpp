@@ -27,7 +27,7 @@ class Trie{
             // base case
             if(word.length() == 0){
                 root->isTernminal = true;
-                return;  // Add this return statement
+                return;  // Add this return statement '
             }
             // assumption: words are capital .
             int index = word[0] - 'A';
