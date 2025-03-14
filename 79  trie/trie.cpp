@@ -29,7 +29,7 @@ class Trie{
                 root->isTernminal = true;
                 return;  // Add this return statement
             }
-            // assumption: words are capital
+            // assumption: words are capital .
             int index = word[0] - 'A';
             TrieNode* child;
 
