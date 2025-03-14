@@ -37,7 +37,7 @@ class Trie{
             if(root->children[index] != NULL){
                 //go to next node
                 child = root->children[index];
-            }//absent
+            }//absent hai
             else {
                 child = new TrieNode(word[0]);
                 root->children[index] = child;
