@@ -12,7 +12,7 @@ class Node {
     Node* left;
     Node* right;
 
-    // Constructor to initialize a new node 
+    // Constructor to initialize a new node is
     Node(int val) {
         data = val;
         left = NULL;
