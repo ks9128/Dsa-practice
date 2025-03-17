@@ -7,7 +7,7 @@ class Solution {
     public:
       bool isSafe(int row, int col,vector<vector<int>> &board, int val ){
           for(int i = 0;i <9;i++){
-          //check row and col
+          //check row and col :
               if(board[row][i]==val || board[i][col]==val){
                   return false;
               }
