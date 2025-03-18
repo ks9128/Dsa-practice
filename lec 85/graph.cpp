@@ -44,7 +44,7 @@ int main(){
     for(int i=0; i<m; i++){
         int u,v;
         cin>> u>> v;
-        g.addEdge(u,v,0); //let undirected graph(0);
+        g.addEdge(u,v,0); //let undirected graph(0); ->
     }
 
     g.printAdjList();
