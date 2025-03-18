@@ -40,7 +40,7 @@ int main(){
     cout<<"enter the no of edges"<<endl;
     cin>> m;
 
-    graph<int> g;  // used template so u can use int char or other used by adding here
+    graph<int> g;  // used template so u can use int char or other used by adding here done
     for(int i=0; i<m; i++){
         int u,v;
         cin>> u>> v;
