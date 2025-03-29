@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
 using namespace std;
 // approach 1 using dp - top to bottom approach
 // int fib(int n,vector<int> dp){
