@@ -1,4 +1,6 @@
 #include<vector>
+#include<iostream>
+using namespace std;
 #define MOD 1000000007
 
 // long long int countDerangements(int n) {
@@ -49,7 +51,7 @@
 //approach 4: space optimization
 
 long long int solve(int n){
-    vector<long long int> dp(n+1);
+    vector <long long int> dp(n+1);
     long long int prev2 = 0;
     long long int prev1 = 1;
     for(int i= 3; i<n+1; i++){
