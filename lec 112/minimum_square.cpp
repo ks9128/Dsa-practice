@@ -14,6 +14,10 @@
     //     return solve(n,dp);
     // }
     
+    #include <iostream>
+    #include <vector>
+    #include <climits>
+    using namespace std;
     //approach 2
     int solve(int n){
         vector<int> dp(n+1,INT_MAX);
