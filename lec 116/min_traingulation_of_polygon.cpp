@@ -1,4 +1,9 @@
-#include <bits/stdc++.h> 
+#include <iostream>
+#include <vector>
+#include <climits>
+#include <algorithm>
+using namespace std;
+
 //approach1
 int solve(vector<int> &v, int n, int i, int j){
 	//base case
