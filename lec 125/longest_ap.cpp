@@ -62,7 +62,7 @@ class Solution {
                       cnt = dp[j][diff];
                   
                   dp[i][diff]= 1+ cnt;
-                  ans = max(ans,dp[i][diff]);
+                  ans = max(ans,dp[i][diff]); //max fcn
               }
           }
           return ans;
