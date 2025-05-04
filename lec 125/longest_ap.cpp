@@ -68,6 +68,27 @@ class Solution {
           return ans;
       }
       
+       //space optimization
+     int lengthOfLongestAP(vector<int>& arr) {
+        int n = arr.size();
+        if(n<=2) return n;
+        int ans = 1;
+        
+        unordered_set <int> dp(arr.begin(),arr.end());
+        for(int i=0; i<n; i++){
+            for(int j= i+1; j<n; j++){
+                int cnt = 2;
+                int diff = arr[j] - arr[i];
+                int next = 2*arr[j]-arr[i]; // 2b-a = c
+                while (dp.find(next) != dp.end()) {
+                    cnt++;
+                    next = next+ diff;
+                    }
+                ans = max(ans,cnt);
+            }
+        }
+        return ans;
+    }
       
       
       
